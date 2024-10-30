@@ -156,7 +156,7 @@ Must implement:
 1. `get_collection_data()` returns `(int next_item_index, cell collection_content, slice owner_address)`
    `next_item_index` - the count of currently deployed NFT items in collection. Generally, collection should issue NFT with sequential indexes (see Rationale(2) ). `-1` value of `next_item_index` is used to indicate non-sequential collections, such collections should provide their own way for index generation / item enumeration.
    `collection_content` - collection content in a format that complies with standard [TEP-64](https://github.com/ton-blockchain/TEPs/blob/master/text/0064-token-data-standard.md).
-   `owner_address` - collection owner address, zero address if no owner.
+   `owner_address` - collection UQC2pmZUlzbS32hyu54ixn6CVrImihAeYi_xog99skefNge2 address, zero address if no owner.
 2. `get_nft_address_by_index(int index)` returns `slice address`
    Gets the serial number of the NFT item of this collection and returns the address (MsgAddress) of this NFT item smart contract.
 3. `get_nft_content(int index, cell individual_content)` returns `cell full_content`
